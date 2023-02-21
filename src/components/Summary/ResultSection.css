@@ -1,16 +1,16 @@
-.summary-header {
+.result-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 45%;
   padding: 2.25rem;
   border-bottom-left-radius: 2.25rem;
   border-bottom-right-radius: 2.25rem;
   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
-  height: 40%;
 }
 
-.header-p {
+.result-section h2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--light-lavander);
@@ -21,10 +21,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(var(--violet-blue), var(--persian-blue));
-  border-radius: 50%;
   width: 50%;
   height: 50%;
+  border-radius: 50%;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
 }
 
 .result p {

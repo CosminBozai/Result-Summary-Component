@@ -19,23 +19,23 @@
   font-weight: 500;
 }
 
-.card:first-of-type {
+.card:first-child {
   margin-top: 2rem;
   background: hsla(0, 100%, 67%, 0.1);
   color: var(--light-red);
 }
 
-.card:nth-child(3) {
+.card:nth-child(2) {
   background: hsla(39, 100%, 56%, 0.1);
   color: var(--orange-yellow);
 }
 
-.card:nth-child(4) {
+.card:nth-child(3) {
   background: hsla(166, 100%, 37%, 0.1);
   color: var(--green-teal);
 }
 
-.card:nth-child(5) {
+.card:nth-child(4) {
   background: hsla(234, 85%, 45%, 0.1);
   color: var(--cobalt-blue);
 }

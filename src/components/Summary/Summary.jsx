@@ -5,14 +5,14 @@ import { ReactComponent as IconVerbal } from "../../assets/images/icon-verbal.sv
 import { ReactComponent as IconVisual } from "../../assets/images/icon-visual.svg";
 
 import "./index.css";
-import "./Header.css";
+import "./ResultSection.css";
 import "./Body.css";
 
 function Summary() {
   return (
     <div className="summary-component">
-      <div className="summary-header">
-        <p className="header-p">Your Result</p>
+      <section className="result-section">
+        <h2>Your Result</h2>
         <div className="result">
           <p>76</p>
           <span>of 100</span>
@@ -21,36 +21,46 @@ function Summary() {
         <p className="higher-than">
           You scored higher than 65% of the people who have taken these tests.
         </p>
-      </div>
+      </section>
       <div className="summary-body">
         <h2>Summary</h2>
-        <div className="card">
-          <div className="card-name">
-            <IconReaction />
-            <p>Reaction</p>
+        <div>
+          <div className="card">
+            <div className="card-name">
+              <IconReaction />
+              <p>Reaction</p>
+            </div>
+            <p className="card-score">
+              80 <span>/ 100</span>{" "}
+            </p>
           </div>
-          <p className="card-score">80/100</p>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <IconMemory />
-            <p>Memory</p>
+          <div className="card">
+            <div className="card-name">
+              <IconMemory />
+              <p>Memory</p>
+            </div>
+            <p className="card-score">
+              80 <span>/ 100</span>{" "}
+            </p>
           </div>
-          <p className="card-score">80/100</p>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <IconVerbal />
-            <p>Verbal</p>
+          <div className="card">
+            <div className="card-name">
+              <IconVerbal />
+              <p>Verbal</p>
+            </div>
+            <p className="card-score">
+              80 <span>/ 100</span>{" "}
+            </p>
           </div>
-          <p className="card-score">80/100</p>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <IconVisual />
-            <p>Visual</p>
+          <div className="card">
+            <div className="card-name">
+              <IconVisual />
+              <p>Visual</p>
+            </div>
+            <p className="card-score">
+              80 <span>/ 100</span>{" "}
+            </p>
           </div>
-          <p className="card-score">80/100</p>
         </div>
         <button className="continue-btn">Continue</button>
       </div>
