@@ -26,6 +26,7 @@
 }
 
 .summary-component {
+  display: block;
   height: 100vh;
   width: 100vw;
   font-family: "HankenGrotesk";
