@@ -38,7 +38,7 @@
     align-items: center;
     height: 460px;
     width: 700px;
-    border: 1px solid black;
     border-radius: 2.25rem;
+    box-shadow: 6px 7px 30px -14px var(--light-royal-blue);
   }
 }

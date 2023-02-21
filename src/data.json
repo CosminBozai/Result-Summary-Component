@@ -1,22 +1,80 @@
 [
   {
-    "category": "Reaction",
-    "score": 80,
-    "icon": "./assets/images/icon-reaction.svg"
+    "reaction": 80,
+    "memory": 80,
+    "verbal": 80,
+    "visual": 80
   },
   {
-    "category": "Memory",
-    "score": 92,
-    "icon": "./assets/images/icon-memory.svg"
+    "reaction": 67,
+    "memory": 40,
+    "verbal": 70,
+    "visual": 59
   },
   {
-    "category": "Verbal",
-    "score": 61,
-    "icon": "./assets/images/icon-verbal.svg"
+    "reaction": 92,
+    "memory": 90,
+    "verbal": 89,
+    "visual": 95
   },
   {
-    "category": "Visual",
-    "score": 72,
-    "icon": "./assets/images/icon-visual.svg"
+    "reaction": 54,
+    "memory": 44,
+    "verbal": 70,
+    "visual": 67
+  },
+  {
+    "reaction": 80,
+    "memory": 76,
+    "verbal": 77,
+    "visual": 82
+  },
+  {
+    "reaction": 88,
+    "memory": 77,
+    "verbal": 90,
+    "visual": 84
+  },
+  {
+    "reaction": 81,
+    "memory": 74,
+    "verbal": 72,
+    "visual": 79
+  },
+  {
+    "reaction": 56,
+    "memory": 67,
+    "verbal": 71,
+    "visual": 63
+  },
+  {
+    "reaction": 66,
+    "memory": 56,
+    "verbal": 50,
+    "visual": 45
+  },
+  {
+    "reaction": 87,
+    "memory": 80,
+    "verbal": 79,
+    "visual": 80
+  },
+  {
+    "reaction": 74,
+    "memory": 72,
+    "verbal": 79,
+    "visual": 89
+  },
+  {
+    "reaction": 75,
+    "memory": 68,
+    "verbal": 54,
+    "visual": 74
+  },
+  {
+    "reaction": 75,
+    "memory": 86,
+    "verbal": 85,
+    "visual": 79
   }
 ]
