@@ -31,3 +31,14 @@
   font-family: "HankenGrotesk";
   font-size: 18px;
 }
+
+@media (min-width: 640px) {
+  .summary-component {
+    display: flex;
+    align-items: center;
+    height: 460px;
+    width: 700px;
+    border: 1px solid black;
+    border-radius: 2.25rem;
+  }
+}

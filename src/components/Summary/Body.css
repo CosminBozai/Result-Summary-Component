@@ -73,3 +73,9 @@
 .continue-btn:active {
   background: var(--light-royal-blue);
 }
+
+@media (min-width: 640px) {
+  .summary-body {
+    flex: 1;
+  }
+}
