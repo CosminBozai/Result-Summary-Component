@@ -70,6 +70,10 @@
   cursor: pointer;
 }
 
+.continue-btn:hover {
+  background: hsl(241, 68%, 30%);
+}
+
 .continue-btn:active {
   background: var(--light-royal-blue);
 }
