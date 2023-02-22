@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { ReactComponent as IconMemory } from "../../assets/images/icon-memory.svg";
 import { ReactComponent as IconReaction } from "../../assets/images/icon-reaction.svg";
 import { ReactComponent as IconVerbal } from "../../assets/images/icon-verbal.svg";
@@ -9,16 +9,23 @@ import getRandomItem from "../../utils/getRandomIndex";
 import "./index.css";
 import "./ResultSection.css";
 import "./Body.css";
+import { getAllResults, getResult } from "../../utils/getResults";
+import GetPercentageOfPeopleBelow from "../../utils/GetPercentageOfPeopleBelow";
 
-function Summary({
-  result,
-  reaction,
-  memory,
-  verbal,
-  visual,
-  percentageBelow,
-  setCurrentTest,
-}) {
+function Summary({ currentTest, setCurrentTest }) {
+  const { reaction, memory, verbal, visual } = currentTest;
+  const [testResult, setTestResult] = useState(0);
+  const allResults = useMemo(() => getAllResults(data), [data]);
+  const [percentageBelow, setPercentageBelow] = useState(0);
+
+  useEffect(() => {
+    setTestResult(getResult(currentTest));
+  }, [currentTest]);
+
+  useEffect(() => {
+    setPercentageBelow(GetPercentageOfPeopleBelow(allResults, testResult));
+  }, [testResult]);
+
   const handleClick = () => {
     setCurrentTest(getRandomItem(data));
   };
@@ -27,7 +34,7 @@ function Summary({
       <section className="result-section">
         <h2>Your Result</h2>
         <div className="result">
-          <p>{result}</p>
+          <p>{testResult}</p>
           <span>of 100</span>
         </div>
         <p className="assessment">Great</p>
