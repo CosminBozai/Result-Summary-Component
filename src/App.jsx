@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Summary from "./components/Summary/Summary";
 import data from "./data.json";
