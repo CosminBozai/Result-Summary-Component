@@ -72,9 +72,51 @@
     "visual": 74
   },
   {
-    "reaction": 75,
-    "memory": 86,
-    "verbal": 85,
-    "visual": 79
+    "reaction": 66,
+    "memory": 70,
+    "verbal": 71,
+    "visual": 68
+  },
+  {
+    "reaction": 90,
+    "memory": 84,
+    "verbal": 86,
+    "visual": 89
+  },
+  {
+    "reaction": 45,
+    "memory": 50,
+    "verbal": 58,
+    "visual": 75
+  },
+  {
+    "reaction": 77,
+    "memory": 77,
+    "verbal": 89,
+    "visual": 90
+  },
+  {
+    "reaction": 67,
+    "memory": 76,
+    "verbal": 67,
+    "visual": 74
+  },
+  {
+    "reaction": 80,
+    "memory": 80,
+    "verbal": 79,
+    "visual": 81
+  },
+  {
+    "reaction": 91,
+    "memory": 89,
+    "verbal": 78,
+    "visual": 80
+  },
+  {
+    "reaction": 71,
+    "memory": 72,
+    "verbal": 70,
+    "visual": 71
   }
 ]
