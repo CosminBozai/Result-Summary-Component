@@ -17,6 +17,7 @@ function Summary({ currentTest, setCurrentTest }) {
   const [testResult, setTestResult] = useState(0);
   const allResults = useMemo(() => getAllResults(data), [data]);
   const [percentageBelow, setPercentageBelow] = useState(0);
+  const [assessmentMsg, setAssessmentMsg] = useState("Awful");
 
   useEffect(() => {
     setTestResult(getResult(currentTest));
@@ -26,9 +27,45 @@ function Summary({ currentTest, setCurrentTest }) {
     setPercentageBelow(GetPercentageOfPeopleBelow(allResults, testResult));
   }, [testResult]);
 
+  useEffect(() => {
+    if (percentageBelow <= 20) {
+      setAssessmentMsg("Awful");
+    } else if (percentageBelow > 20 && percentageBelow <= 40) {
+      setAssessmentMsg("Bad");
+    } else if (percentageBelow > 40 && percentageBelow <= 60) {
+      setAssessmentMsg("Average");
+    } else if (percentageBelow > 60 && percentageBelow <= 80) {
+      setAssessmentMsg("Good");
+    } else if (percentageBelow > 80) {
+      setAssessmentMsg("Great");
+    }
+
+    switch (true) {
+      case percentageBelow < 20:
+        setAssessmentMsg("Awful");
+        break;
+      case percentageBelow >= 20 && percentageBelow < 40:
+        setAssessmentMsg("Bad");
+        break;
+      case percentageBelow >= 40 && percentageBelow < 60:
+        setAssessmentMsg("Average");
+        break;
+      case percentageBelow >= 60 && percentageBelow < 80:
+        setAssessmentMsg("Good");
+        break;
+      case percentageBelow >= 80 && percentageBelow < 100:
+        setAssessmentMsg("Great");
+        break;
+      case percentageBelow === 100:
+        setAssessmentMsg("The very best");
+        break;
+    }
+  }, [percentageBelow]);
+
   const handleClick = () => {
     setCurrentTest(getRandomItem(data));
   };
+
   return (
     <div className="summary-component">
       <section className="result-section">
@@ -37,7 +74,7 @@ function Summary({ currentTest, setCurrentTest }) {
           <p>{testResult}</p>
           <span>of 100</span>
         </div>
-        <p className="assessment">Great</p>
+        <p className="assessment">{assessmentMsg}</p>
         <p className="higher-than">
           You scored higher than {percentageBelow}% of the people who have taken
           these tests.
