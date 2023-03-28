@@ -1,18 +1,23 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ReactComponent as IconMemory } from "../../assets/images/icon-memory.svg";
 import { ReactComponent as IconReaction } from "../../assets/images/icon-reaction.svg";
 import { ReactComponent as IconVerbal } from "../../assets/images/icon-verbal.svg";
 import { ReactComponent as IconVisual } from "../../assets/images/icon-visual.svg";
 import data from "../../data.json";
 import getRandomItem from "../../utils/getRandomIndex";
-
+import { getAllResults, getResult } from "../../utils/getResults";
+import GetPercentageOfPeopleBelow from "../../utils/GetPercentageOfPeopleBelow";
 import "./index.css";
 import "./ResultSection.css";
 import "./Body.css";
-import { getAllResults, getResult } from "../../utils/getResults";
-import GetPercentageOfPeopleBelow from "../../utils/GetPercentageOfPeopleBelow";
+import Test from "../../interface/Test";
 
-function Summary({ currentTest, setCurrentTest }) {
+interface Props {
+  currentTest: Test;
+  setCurrentTest: React.Dispatch<React.SetStateAction<Test>>;
+}
+
+function Summary({ currentTest, setCurrentTest }: Props) {
   const { reaction, memory, verbal, visual } = currentTest;
   const [testResult, setTestResult] = useState(0);
   const allResults = useMemo(() => getAllResults(data), [data]);
