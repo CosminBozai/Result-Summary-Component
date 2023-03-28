@@ -17,15 +17,16 @@ export function getAllResults(data: Test[]): number[] {
   return results.sort();
 }
 
-export function getRandomItem(arr: Test[]): Test {
-  return arr[Math.floor(Math.random() * arr.length)];
+export function getRandomItem(data: Test[]): Test {
+  return data[Math.floor(Math.random() * data.length)];
 }
 
 export function GetPercentageOfPeopleBelow(
   allResults: number[],
   result: number
 ): number {
-  const currentTestPosition = allResults.indexOf(result) + 1;
-  const resultsAbove = allResults.length - currentTestPosition;
-  return 100 - Math.round((resultsAbove / allResults.length) * 100);
+  const index = allResults.indexOf(result);
+  if (index === 0) return 0;
+
+  return Math.round((index / (allResults.length - 1)) * 100);
 }
