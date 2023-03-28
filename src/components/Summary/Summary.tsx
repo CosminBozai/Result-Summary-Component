@@ -1,16 +1,14 @@
-import { useEffect, useMemo, useState } from "react";
+import data from "../../data.json";
+import Test from "../../utils/TestInterface";
+import useTestResult from "../../utils/useTestResult";
+import { getRandomItem } from "../../utils/utilityFunctions";
 import { ReactComponent as IconMemory } from "../../assets/images/icon-memory.svg";
 import { ReactComponent as IconReaction } from "../../assets/images/icon-reaction.svg";
 import { ReactComponent as IconVerbal } from "../../assets/images/icon-verbal.svg";
 import { ReactComponent as IconVisual } from "../../assets/images/icon-visual.svg";
-import data from "../../data.json";
-import getRandomItem from "../../utils/getRandomIndex";
-import { getAllResults, getResult } from "../../utils/getResults";
-import GetPercentageOfPeopleBelow from "../../utils/GetPercentageOfPeopleBelow";
 import "./index.css";
 import "./ResultSection.css";
 import "./Body.css";
-import Test from "../../interface/Test";
 
 interface Props {
   currentTest: Test;
@@ -19,55 +17,10 @@ interface Props {
 
 function Summary({ currentTest, setCurrentTest }: Props) {
   const { reaction, memory, verbal, visual } = currentTest;
-  const [testResult, setTestResult] = useState(0);
-  const allResults = useMemo(() => getAllResults(data), [data]);
-  const [percentageBelow, setPercentageBelow] = useState(0);
-  const [assessmentMsg, setAssessmentMsg] = useState("Awful");
+  const { testResult, percentageBelow, assessmentMsg } =
+    useTestResult(currentTest);
 
-  useEffect(() => {
-    setTestResult(getResult(currentTest));
-  }, [currentTest]);
-
-  useEffect(() => {
-    setPercentageBelow(GetPercentageOfPeopleBelow(allResults, testResult));
-  }, [testResult]);
-
-  useEffect(() => {
-    if (percentageBelow <= 20) {
-      setAssessmentMsg("Awful");
-    } else if (percentageBelow > 20 && percentageBelow <= 40) {
-      setAssessmentMsg("Bad");
-    } else if (percentageBelow > 40 && percentageBelow <= 60) {
-      setAssessmentMsg("Average");
-    } else if (percentageBelow > 60 && percentageBelow <= 80) {
-      setAssessmentMsg("Good");
-    } else if (percentageBelow > 80) {
-      setAssessmentMsg("Great");
-    }
-
-    switch (true) {
-      case percentageBelow < 20:
-        setAssessmentMsg("Awful");
-        break;
-      case percentageBelow >= 20 && percentageBelow < 40:
-        setAssessmentMsg("Bad");
-        break;
-      case percentageBelow >= 40 && percentageBelow < 60:
-        setAssessmentMsg("Average");
-        break;
-      case percentageBelow >= 60 && percentageBelow < 80:
-        setAssessmentMsg("Good");
-        break;
-      case percentageBelow >= 80 && percentageBelow < 100:
-        setAssessmentMsg("Great");
-        break;
-      case percentageBelow === 100:
-        setAssessmentMsg("The very best");
-        break;
-    }
-  }, [percentageBelow]);
-
-  const handleClick = () => {
+  const getAnotherTest = () => {
     setCurrentTest(getRandomItem(data));
   };
 
@@ -125,7 +78,7 @@ function Summary({ currentTest, setCurrentTest }: Props) {
             </p>
           </div>
         </div>
-        <button onClick={handleClick} className="continue-btn">
+        <button onClick={getAnotherTest} className="continue-btn">
           Retry
         </button>
       </div>
