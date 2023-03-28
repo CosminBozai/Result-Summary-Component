@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./App.css";
-import Summary from "./components/Summary/Summary";
+import Summary from "./components/Summary";
 import data from "./data.json";
 import Test from "./utils/TestInterface";
+import "./styles/App.scss";
 
 function App() {
   const [currentTest, setCurrentTest] = useState<Test>(data[0]);

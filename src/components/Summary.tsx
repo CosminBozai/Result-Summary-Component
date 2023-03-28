@@ -1,14 +1,12 @@
-import data from "../../data.json";
-import Test from "../../utils/TestInterface";
-import useTestResult from "../../utils/useTestResult";
-import { getRandomItem } from "../../utils/utilityFunctions";
-import { ReactComponent as IconMemory } from "../../assets/images/icon-memory.svg";
-import { ReactComponent as IconReaction } from "../../assets/images/icon-reaction.svg";
-import { ReactComponent as IconVerbal } from "../../assets/images/icon-verbal.svg";
-import { ReactComponent as IconVisual } from "../../assets/images/icon-visual.svg";
-import "./index.css";
-import "./ResultSection.css";
-import "./Body.css";
+import data from "../data.json";
+import Test from "../utils/TestInterface";
+import useTestResult from "../utils/useTestResult";
+import { getRandomItem } from "../utils/utilityFunctions";
+import { ReactComponent as IconMemory } from "../assets/images/icon-memory.svg";
+import { ReactComponent as IconReaction } from "../assets/images/icon-reaction.svg";
+import { ReactComponent as IconVerbal } from "../assets/images/icon-verbal.svg";
+import { ReactComponent as IconVisual } from "../assets/images/icon-visual.svg";
+import "../styles/Summary.scss";
 
 interface Props {
   currentTest: Test;
@@ -28,21 +26,21 @@ function Summary({ currentTest, setCurrentTest }: Props) {
     <div className="summary-component">
       <section className="result-section">
         <h2>Your Result</h2>
-        <div className="result">
+        <div className="test-score-container">
           <p>{testResult}</p>
           <span>of 100</span>
         </div>
         <p className="assessment">{assessmentMsg}</p>
-        <p className="higher-than">
+        <p className="higher-than-message">
           You scored higher than {percentageBelow}% of the people who have taken
           these tests.
         </p>
       </section>
-      <div className="summary-body">
+      <section className="summary-section">
         <h2>Summary</h2>
         <div>
-          <div className="card">
-            <div className="card-name">
+          <div className="test-criteria-card">
+            <div className="criteria">
               <IconReaction />
               <p>Reaction</p>
             </div>
@@ -50,8 +48,8 @@ function Summary({ currentTest, setCurrentTest }: Props) {
               {reaction} <span>/ 100</span>{" "}
             </p>
           </div>
-          <div className="card">
-            <div className="card-name">
+          <div className="test-criteria-card">
+            <div className="criteria">
               <IconMemory />
               <p>Memory</p>
             </div>
@@ -59,8 +57,8 @@ function Summary({ currentTest, setCurrentTest }: Props) {
               {memory} <span>/ 100</span>{" "}
             </p>
           </div>
-          <div className="card">
-            <div className="card-name">
+          <div className="test-criteria-card">
+            <div className="criteria">
               <IconVerbal />
               <p>Verbal</p>
             </div>
@@ -68,8 +66,8 @@ function Summary({ currentTest, setCurrentTest }: Props) {
               {verbal} <span>/ 100</span>{" "}
             </p>
           </div>
-          <div className="card">
-            <div className="card-name">
+          <div className="test-criteria-card">
+            <div className="criteria">
               <IconVisual />
               <p>Visual</p>
             </div>
@@ -78,10 +76,10 @@ function Summary({ currentTest, setCurrentTest }: Props) {
             </p>
           </div>
         </div>
-        <button onClick={getAnotherTest} className="continue-btn">
+        <button onClick={getAnotherTest} className="retry-btn">
           Retry
         </button>
-      </div>
+      </section>
     </div>
   );
 }
