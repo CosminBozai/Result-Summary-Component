@@ -22,7 +22,7 @@ The app has a sleek and modern-looking design, which is fully responsive and opt
 
 ### Screenshot
 ![](./public/lg-screen.png)
-![](./public/sm-screen.png])
+![](./public/sm-screen.png)
 
 ### Links
 
