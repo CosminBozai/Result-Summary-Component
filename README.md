@@ -6,9 +6,7 @@
   - [Features](#features)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -16,30 +14,29 @@
 
 ### Features
 
-- Responsive and modern-looking design
-- Reusable component
-- Dinamically generated data (calculate the result from the 4 categories of the test; calculate the percent of people that scored below the current user)
-- Optimized performance with hooks like useMemo and code-spliting
+This app is a modern, well-designed application built using well established web technologies. It is written in React using SOLID principles, which ensures that the code is clean, maintainable, and easy to understand. The app is divided into modules, making it easy to add new features and update existing ones. It also features reusable components and custom hooks, which help to reduce code duplication and improve the overall quality of the codebase.
+
+One of the standout features of this app is that it is written in TypeScript, a statically-typed superset of JavaScript. This allows for better code reliability, as well as improved tooling and editor support. Additionally, the app has been thoroughly tested using testing libraries, ensuring that it is stable and reliable.
+
+The app has a sleek and modern-looking design, which is fully responsive and optimized for mobile devices. The design was created using SASS and a mobile-first workflow, ensuring that it looks great and functions well on devices of all sizes.
 
 ### Screenshot
 <img src="./public/lg-screen.png" align="left" height="200" width="400" >
 <img src="./public/sm-screen.png" align="left" height="400" width="200" >
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Live Site URL: [Vercel](https://result-summary-component-three.vercel.app/)
 
 ### Built with
 
-- Mobile-first workflow
-- Flexbox
-- [React](https://reactjs.org/) - JS library
+The app was built using a number of different technologies and tools, including:
 
-### Continued development
-
-In the future it will be possible for the user to add tests to the database
+- [Vite]("https://vitejs.dev/"): a fast build tool that allows for rapid development and quick feedback loops
+- [TypeScript]("https://www.typescriptlang.org/"): a statically-typed superset of JavaScript that provides better code reliability and improved tooling
+- [React]("https://react.dev/"): a popular JavaScript library for building user interfaces
+- [Sass]("https://sass-lang.com/"): a preprocessor scripting language that extends CSS and provides more features and flexibility
+- [Vitest]("https://vitest.dev/"): a testing library specifically designed for use with Vite and Vue applications
+- [React Testing Library]("https://testing-library.com/"): a testing utility for React that allows for easy and efficient testing of UI components
 
 ## Author
 
