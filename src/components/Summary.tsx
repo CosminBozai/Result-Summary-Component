@@ -24,7 +24,7 @@ function Summary({ currentTest, setCurrentTest }: Props) {
 
   return (
     <div className="summary-component">
-      <section className="result-section">
+      <section className="result-section" data-testid="result-section">
         <h2>Your Result</h2>
         <div className="test-score-container">
           <p>{testResult}</p>
@@ -36,7 +36,7 @@ function Summary({ currentTest, setCurrentTest }: Props) {
           these tests.
         </p>
       </section>
-      <section className="summary-section">
+      <section className="summary-section" data-testid="summary-section">
         <h2>Summary</h2>
         <div>
           <div className="test-criteria-card">
