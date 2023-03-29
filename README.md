@@ -21,8 +21,8 @@ One of the standout features of this app is that it is written in TypeScript, a 
 The app has a sleek and modern-looking design, which is fully responsive and optimized for mobile devices. The design was created using SASS and a mobile-first workflow, ensuring that it looks great and functions well on devices of all sizes.
 
 ### Screenshot
-<img src="./public/lg-screen.png" align="left" height="200" width="400" >
-<img src="./public/sm-screen.png" align="left" height="400" width="200" >
+<img src="./public/lg-screen.png" align="left" display="block" height="200" width="400" >
+<img src="./public/sm-screen.png" align="left" display="block" height="400" width="200" >
 ### Links
 
 - Live Site URL: [Vercel](https://result-summary-component-three.vercel.app/)
