@@ -22,8 +22,8 @@
 - Optimized performance with hooks like useMemo and code-spliting
 
 ### Screenshot
-<img src="./public/lg-screen.png" align="left" height="48" width="48" >
-<img src="./public/sm-screen.png" align="left" height="48" width="48" >
+<img src="./public/lg-screen.png" align="left" height="200" width="400" >
+<img src="./public/sm-screen.png" align="left" height="400" width="200" >
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
