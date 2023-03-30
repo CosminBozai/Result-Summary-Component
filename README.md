@@ -32,12 +32,12 @@ The app has a sleek and modern-looking design, which is fully responsive and opt
 
 The app was built using a number of different technologies and tools, including:
 
-- [Vite]("https://vitejs.dev/"): a fast build tool that allows for rapid development and quick feedback loops
-- [TypeScript]("https://www.typescriptlang.org/"): a statically-typed superset of JavaScript that provides better code reliability and improved tooling
-- [React]("https://react.dev/"): a popular JavaScript library for building user interfaces
-- [Sass]("https://sass-lang.com/"): a preprocessor scripting language that extends CSS and provides more features and flexibility
-- [Vitest]("https://vitest.dev/"): a testing library specifically designed for use with Vite and Vue applications
-- [React Testing Library]("https://testing-library.com/"): a testing utility for React that allows for easy and efficient testing of UI components
+- [Vite](https://vitejs.dev/): a fast build tool that allows for rapid development and quick feedback loops
+- [TypeScript](https://www.typescriptlang.org/): a statically-typed superset of JavaScript that provides better code reliability and improved tooling
+- [React](https://react.dev/): a popular JavaScript library for building user interfaces
+- [Sass](https://sass-lang.com/): a preprocessor scripting language that extends CSS and provides more features and flexibility
+- [Vitest](https://vitest.dev/): a testing library specifically designed for use with Vite and Vue applications
+- [React Testing Library](https://testing-library.com/): a testing utility for React that allows for easy and efficient testing of UI components
 
 ## Author
 
